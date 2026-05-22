@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smoke Demo</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, "PingFang SC", sans-serif;
+        background: #f4f7fb;
+        color: #172033;
+      }
+      main {
+        width: min(960px, calc(100vw - 64px));
+        margin: 80px auto;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #d8e0eb;
+        border-radius: 8px;
+        padding: 28px;
+        box-shadow: 0 14px 36px rgb(25 38 64 / 10%);
+      }
+      button {
+        height: 40px;
+        border: 0;
+        border-radius: 6px;
+        padding: 0 16px;
+        background: #1769e0;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button + button {
+        margin-left: 10px;
+      }
+      .panel {
+        min-height: 160px;
+        margin-top: 24px;
+        border: 1px solid #d8e0eb;
+        border-radius: 8px;
+        padding: 18px;
+      }
+      .chart {
+        display: none;
+        gap: 10px;
+        align-items: end;
+        height: 120px;
+        margin-top: 18px;
+      }
+      .chart span {
+        display: block;
+        width: 44px;
+        background: #21a67a;
+        border-radius: 6px 6px 0 0;
+      }
+      .chart.is-visible {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>演示工作台</h1>
+        <p id="status">等待开始</p>
+        <button type="button" onclick="startFlow()">开始</button>
+        <button type="button" onclick="showChart()">展示图表</button>
+        <div class="panel">
+          <strong>当前状态</strong>
+          <p id="detail">流程尚未启动</p>
+          <div id="chart" class="chart" aria-label="业务图表">
+            <span style="height: 42px"></span>
+            <span style="height: 84px"></span>
+            <span style="height: 66px"></span>
+            <span style="height: 108px"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      function startFlow() {
+        document.getElementById("status").textContent = "流程已启动";
+        document.getElementById("detail").textContent = "系统已完成基础状态检查";
+      }
+      function showChart() {
+        document.getElementById("chart").classList.add("is-visible");
+        document.getElementById("detail").textContent = "关键图表已展示";
+      }
+    </script>
+  </body>
+</html>

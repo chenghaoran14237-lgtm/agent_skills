@@ -7,6 +7,36 @@ repeatable, inspectable, and aligned with the actual project state.
 
 ## Skills
 
+### [`demo-video-producer`](./demo-video-producer/)
+
+**EN**
+
+- **Problem it solves:** Produces stable customer-facing product demo videos from
+  a scene manifest, voiceover/subtitle files, Playwright browser recording, sync
+  verification, and final MP4 checks.
+- **Typical scenarios:**
+  - recording chatbot plus admin-console product demos
+  - validating audio/video synchronization before delivery
+  - using replaceable voice samples or provided narration assets
+  - extracting finite visual checkpoints instead of doing unbounded frame review
+- **How to use:**
+  - Ask Codex to use `demo-video-producer` for a product demo MP4.
+  - Provide the target app URL or local project, narration requirements, and any
+    reference voice assets.
+
+**中文**
+
+- **解决的问题：** 基于场景清单、配音/字幕、Playwright 录屏、音画同步校验和
+  MP4 探测，稳定生成面向客户的产品演示视频。
+- **典型应用场景：**
+  - 录制 chatbot + 配置中台一类的产品演示
+  - 交付前验证音画同步
+  - 使用用户提供的音色或现成配音文件
+  - 抽取有限关键帧，避免无上限的人工抽帧检查
+- **使用方式：**
+  - 让 Codex 使用 `demo-video-producer` 生成演示视频。
+  - 提供目标页面、本地项目、讲解要求，以及可选参考音频。
+
 ### [`chr-governance`](./chr-governance/)
 
 **EN**

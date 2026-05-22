@@ -1,0 +1,54 @@
+{
+  "project": "product-demo",
+  "version": "v1",
+  "viewport": { "width": 1440, "height": 900 },
+  "customActions": "custom-actions.mjs",
+  "voice": {
+    "mode": "edge-tts",
+    "voice": "zh-CN-YunjianNeural",
+    "rate": "+4%",
+    "pitch": "-2Hz",
+    "volume": "+8%"
+  },
+  "sync": {
+    "startToleranceMs": 700,
+    "visibleToleranceMs": 1200,
+    "endToleranceMs": 1800
+  },
+  "output": {
+    "video": "dist/product-demo.mp4",
+    "voiceover": "dist/voiceover/voiceover-enhanced.mp3",
+    "srt": "dist/voiceover/subtitles.srt",
+    "transcript": "dist/voiceover/subtitles.txt",
+    "runLog": "dist/product-demo.run-log.json",
+    "visualCheckDir": "dist/video-checks",
+    "audioDelayMs": 0
+  },
+  "services": [
+    {
+      "id": "main",
+      "url": "http://127.0.0.1:3000/",
+      "requiredText": "Required page text"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "page": "main",
+      "cueRange": [1, 1],
+      "checkpoint": true,
+      "narration": "这里放第一段配音。",
+      "actions": [
+        { "type": "goto", "service": "main" },
+        { "type": "waitText", "text": "Required page text" }
+      ],
+      "target": {
+        "selector": "body",
+        "description": "主页面"
+      },
+      "checks": [
+        { "type": "visibleText", "text": "Required page text" }
+      ]
+    }
+  ]
+}

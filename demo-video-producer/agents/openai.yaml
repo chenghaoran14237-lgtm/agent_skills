@@ -1,0 +1,4 @@
+interface:
+  display_name: "Demo Video Producer"
+  short_description: "Create stable customer-facing demo videos with scene manifests, replaceable voice, synced Playwright recording, and MP4 checks."
+  default_prompt: "Produce a polished product demo video from my app: write the scene manifest and narration, prepare replaceable voiceover/subtitles, record the UI with Playwright, verify audio/video sync, compose the MP4, and run delivery checks."

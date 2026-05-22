@@ -1,0 +1,19 @@
+{
+  "name": "demo-video-producer-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "doctor": "node scripts/check-environment.mjs",
+    "init": "node scripts/init-project.mjs",
+    "voice": "node scripts/prepare-voice.mjs",
+    "validate": "node scripts/validate-scene-plan.mjs",
+    "record": "node scripts/record-runner.mjs",
+    "sync": "node scripts/verify-sync.mjs",
+    "probe": "node scripts/probe-video.mjs",
+    "visual": "node scripts/visual-check.mjs",
+    "smoke": "node scripts/smoke-record.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.44.0"
+  }
+}
