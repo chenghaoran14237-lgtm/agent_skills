@@ -1,0 +1,4 @@
+interface:
+  display_name: "CHR Governance"
+  short_description: "Govern project docs with git-aware CHR checks."
+  default_prompt: "Use chr-governance for chr:check, chr:sync, chr:gc, and requests like 'use chr for document governance' or '用 chr 进行文档治理'. Initialize and govern AGENTS.md, DOCS_POLICY.md, .chr.toml, .chr/waivers.toml, active docs, OpenSpec docs, stale docs, superseded docs, archived docs, and git-aware documentation impact."
